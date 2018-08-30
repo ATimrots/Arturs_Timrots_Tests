@@ -43,7 +43,7 @@ if (!isset($_SESSION['user_id'])) {
             $output .= '<div class="col" id="a'. $i .'" onclick="setAnswer('. $answerId .', ' . $i . ')" >
                         <a>' . $answerValue . '</a>
                     </div>';
-            if (($i % 2) == 0) $output .= '</div>';
+            if (($i % 2) == 0 || $i == count($answers)) $output .= '</div>';
             $i++;
         }
 
